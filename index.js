@@ -23,10 +23,15 @@ const eliminarProducto = (producto) => {
 }
 
 const mostrarLista = () => {
-    listaDeCompras.forEach((producto, index) => {
-        console.log(`${index + 1} - ${producto}`);
-    });
+    if (listaDeCompras.length === 0) {
+        console.log("La lista de compras está vacía.");
+    } else {
+        listaDeCompras.forEach((producto, index) => {
+            console.log(`${index + 1} - ${producto}`);
+        });
+    }
 };
+
 
 
 agregarProducto("Tele");
