@@ -3,9 +3,6 @@
 // Los usuarios deben poder añadir productos a la lista, eliminar productos y ver la lista completa de compras.
 
 // Instrucciones para resolver el problema:
-// Crea un arreglo vacío llamado listaDeCompras.
-// Implementa una función agregarProducto(producto) que agregue un nuevo producto al final de la lista.
-// Implementa una función eliminarProducto(producto) que elimine un producto de la lista.
 // Implementa una función mostrarLista() que imprima todos los productos de la lista.
 // Asegúrate de que no haya productos duplicados en la lista.
 
@@ -26,3 +23,20 @@ const eliminarProducto = (producto) => {
         console.log(`El producto: ${producto} no se encuentra en la lista de compras.`)
     }
 }
+
+const mostrarLista = (listaDeCompras) => {
+    listaDeCompras.forEach((producto, index) => {
+        console.log(`${index + 1} - ${producto}`);
+    });
+};
+
+
+agregarProducto("Tele");
+agregarProducto("Xbox");
+agregarProducto("PlayStation");
+agregarProducto("Nintendo Switch");
+
+
+eliminarProducto("Tele");
+
+mostrarLista(listaDeCompras);
