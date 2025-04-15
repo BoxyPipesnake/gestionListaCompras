@@ -18,3 +18,11 @@ const agregarProducto = (producto) => {
     listaDeCompras.push(producto);
 }
 
+const eliminarProducto = (producto) => {
+    const index = listaDeCompras.indexOf(producto);
+    if (index > -1) {
+        listaDeCompras.splice(index, 1);
+    } else {
+        console.log(`El producto: ${producto} no se encuentra en la lista de compras.`)
+    }
+}
